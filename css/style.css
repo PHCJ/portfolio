@@ -9,7 +9,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #151320;
+    overflow: hidden;
+}
+.content-all{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 .container{
     display: flex;
@@ -17,8 +23,8 @@ body{
     align-items: center;
     position: relative;
     width: calc(100% - 25px);
-    min-height: calc(100vh - 25px);
-    background: rgb(76, 76, 102);
+    height: calc(100vh - 25px);
+    background: rgb(15, 15, 117);
 }
 
 .container::before, .container::after{
