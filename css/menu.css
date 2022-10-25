@@ -19,8 +19,9 @@ a {
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #23232e;
+    background: transparent;
     height: 8vh;
+    font-size: 24px;
   }
   
   .nav-list {
@@ -54,9 +55,9 @@ a {
       position: absolute;
       top: 8vh;
       right: 0;
-      width: 50vw;
+      width: 100vw;
       height: 92vh;
-      background: #23232e;
+      background: linear-gradient(180deg, rgba(0,102,171,1) 0%, rgba(0,2,33,1) 100%);
       flex-direction: column;
       align-items: center;
       justify-content: space-around;

@@ -1,8 +1,14 @@
+:root{
+    --clr-red1: #ff0055;
+    --clr-neon: hsl(317 100% 54%);
+    --clr-yell: #ffff00;
+}
 *{
     margin: 0;
     box-sizing: border-box;
     padding: 0;
 }
+
 body{
     width: 100%;
     min-height: 100vh;
@@ -10,7 +16,24 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-color: black;
 }
+
+main{
+    display: flex;
+    height: 82%;
+    flex-direction:column;
+    align-items: center;
+    justify-content: initial;
+}
+
+footer{
+    border-top: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
+
 .content-all{
     overflow: hidden;
     width: 100%;
@@ -24,21 +47,39 @@ body{
     position: relative;
     width: calc(100% - 25px);
     height: calc(100vh - 25px);
-    background: rgb(15, 15, 117);
+    background: linear-gradient(180deg, rgba(0,102,171,1) 0%, rgba(0,2,33,1) 100%);
 }
-
 .container::before, .container::after{
     content: '';
     position: absolute;
     width: calc(100% + 25px);
     height: calc(100% + 25px);
-    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff,var(--clr-red1), #ff0000, #ffff00, #00ff00, #0099ff, #001aff, #a200ff);
     z-index: -1;
     background-size: 300%;
     animation: bordaAnimada 5s linear infinite;
 }
 .container::after{
     filter: blur(50px);
+}
+
+.img-perfil{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+}
+.titulo{
+    top: 50px;
+    color: var(--clr-yell);
+    text-shadow: 0 0 10px currentColor;
+}
+
+@media (min-width: 999px) {
+    .container{
+        width: 85%;
+        max-height: 90vh;
+    }
 }
 @keyframes bordaAnimada {
     0%{
